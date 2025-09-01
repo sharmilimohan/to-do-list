@@ -72,13 +72,9 @@ export default function TodoApp() {
       </div>
 
       <div className="counter">
-        <button onClick={() => setFilter("all")} className="rounded-1">
-          All
-        </button>
-        <button onClick={() => setFilter("completed")} className="rounded-2">
-          Completed
-        </button>
-        <button onClick={() => setFilter("pending")} className="rounded-3"> Pending </button>
+        <button onClick={() => setFilter("all")} className="rounded-1">All</button>
+        <button onClick={() => setFilter("completed")} className="rounded-2">Completed</button>
+        <button onClick={() => setFilter("pending")} className="rounded-3">Pending</button>
       </div>
 
       <ul className="lungss">
@@ -95,12 +91,8 @@ export default function TodoApp() {
               </span>
             </div>
             <div className="var1">
-              <button onClick={() => editTask(task.id)} className="variable2">
-                ✏️
-              </button>
-              <button onClick={() => deleteTask(task.id)} className="textcore1">
-                🗑️
-              </button>
+              <button onClick={() => editTask(task.id)} className="variable2">✏️</button>
+              <button onClick={() => deleteTask(task.id)} className="textcore1">🗑️</button>
             </div>
           </li>
         ))}
