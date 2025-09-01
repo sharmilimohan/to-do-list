@@ -2,7 +2,7 @@
   "name": "to-do-list",
   "version": "0.1.0",
   "private": true,
-"homepage": "https://sharmilimohan.github.io/to-do-list",
+  "homepage": "https://sharmilimohan.github.io/To-Do-List",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
