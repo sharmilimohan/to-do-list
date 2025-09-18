@@ -57,8 +57,12 @@ h1 {
   animation: float 5s ease-in-out infinite;
 }
 
-.planet1 { left: 15%; bottom: 40%; }
-.planet2 { right: 15%; bottom: 60%; }
+.planet1 { left: 20%; bottom: 190%; }
+.planet2 { right: 190%; bottom: 90%; }
+.planet3 { right: 60%; bottom: 20%; }
+.planet4 { right: 70%; bottom: 260%; }
+.planet5 { right:570%; bottom: 230%; }
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -145,4 +149,262 @@ h1 {
   border: none;
   font-size: 18px;
   cursor: pointer;
+}
+.congrats {
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  background: rgba(59, 130, 246, 0.9);
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 0 0 10px #facc15;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.8);
+  z-index: 1000;
+}
+
+/* Progress Circle */
+.progress-container {
+  margin: 20px auto;
+  text-align: center;
+}
+.progress-ring {
+  transform: rotate(-90deg);
+}
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+}
+.progress-container p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #fff;
+}
+.restart-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  margin-left: 35%;
+  border-radius: 10px;
+  background: #facc15;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+
+}
+.restart-btn:hover {
+  background: #f59e0b;
+  transform: scale(1.05);
+}
+
+.planets {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.planets {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 100%;
+  height: 100%;
+}
+
+.planet {
+  font-size: 40px;
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+.planet1 { left: 15%; top: 20%; }
+.planet2 { right: 15%; top: 40%; }
+.planet3 { left: 30%; bottom: 20%; }
+.planet4 { right: 25%; bottom: 30%; }
+.planet5 { left: 50%; top: 60%; }
+.planet6 { right: 10%; top: 10%; }
+.planet7 { left: 70%; bottom: 10%; }
+
+/* Mission Setup (task count input) */
+.mission-setup {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Input box */
+.mission-setup input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #3b82f6;
+  outline: none;
+  width: 220px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 0 8px #3b82f6, 0 0 15px #1e3a8a inset;
+  transition: 0.3s;
+}
+
+.mission-setup input:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 12px #a855f7, 0 0 20px #3b82f6 inset;
+}
+
+/* Button */
+.mission-setup button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(45deg, #3b82f6, #a855f7);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 8px #3b82f6, 0 0 15px #a855f7;
+}
+
+.mission-setup button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px #a855f7, 0 0 25px #3b82f6;
+}
+
+
+/* 🌍 RESPONSIVE DESIGN */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .rocket {
+    font-size: 38px;
+  }
+
+  .planet {
+    font-size: 35px;
+  }
+
+  .task-form input {
+    width: 70%;
+  }
+
+  .tasks li {
+    width: 85%;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .space-scene {
+    height: 250px;
+  }
+
+  .rocket {
+    font-size: 32px;
+  }
+
+  .planet {
+    font-size: 28px;
+  }
+
+  .progress-container {
+    margin: 10px auto;
+  }
+
+  .task-form input {
+    width: 65%;
+    padding: 8px;
+  }
+
+  .task-form button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .tasks li {
+    width: 90%;
+    padding: 8px;
+  }
+
+  .congrats {
+    font-size: 18px;
+    left: 5%;
+    padding: 15px 25px;
+
+  }
+
+  .restart-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .space-scene {
+    height: 200px;
+  }
+
+  .rocket {
+    font-size: 28px;
+  }
+
+  .planet {
+    font-size: 24px;
+  }
+
+  .task-form input {
+    width: 60%;
+    font-size: 14px;
+  }
+
+  .task-form button {
+    font-size: 12px;
+  }
+
+  .tasks li {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  
+
+  
+}
+.bubble {
+  position: absolute;
+  font-size: 35px;
+  animation: rise 1.9s ease-out forwards;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1.7;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.2);
+    opacity: 0;
+  }
 }
